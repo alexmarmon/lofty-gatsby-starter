@@ -19,6 +19,12 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Montserrat`, `Raleway`]
+      }
+    }
   ],
 }

@@ -5,8 +5,8 @@
   "author": "Alex Marmon",
   "scripts": {
     "build": "gatsby build",
-    "dev": "cross-env PORT=2727 node dev-server.js",
-    "prod": "cross-env PORT=2727 node prod-server.js",
+    "dev": "cross-env PORT=2727 node build/dev-server.js",
+    "prod": "cross-env PORT=2727 node build/prod-server.js",
     "lint": "eslint -c .eslintrc.js --ext .js --ext .jsx ./src; exit 0",
     "lint-fix": "eslint -c .eslintrc.js --fix --ext .js --ext .jsx ./src; exit 0"
   },
@@ -19,11 +19,14 @@
     "express": "^4.16.2",
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
+    "gatsby-plugin-google-fonts": "0.0.3",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-styled-components": "^2.0.4",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-json": "^1.0.14",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-helmet": "^5.2.0",
     "styled-components": "^2.4.0"
   },
   "devDependencies": {

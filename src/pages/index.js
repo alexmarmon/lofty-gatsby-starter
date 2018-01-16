@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Sample from '../components/sample'
+import styles, { MainHeader } from '../styles'
 
 export default class HomePage extends React.Component {
   constructor(props) {
@@ -10,9 +12,9 @@ export default class HomePage extends React.Component {
 
   render = () => pug`
     HomePageStyles
-      h1 Hi people
+      MainHeader Sample data:
       h2 ${this.data[0].node.age}
-      p Welcome to your new Gatsby site.
+      Sample
       Link(to="/page-2/") Go to page 2
   `
 }
@@ -20,6 +22,11 @@ export default class HomePage extends React.Component {
 const HomePageStyles = styled.div`
   font-size: 20px;
   text-align: center;
+  color: ${styles.gray50};
+
+  ${styles.media.desktop`
+    border: 1px solid #000000;
+  `}
 `
 
 export const query = graphql`

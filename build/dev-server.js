@@ -20,8 +20,10 @@ app.use('/api', function(req, res, next) {
 const watcher = chokidar.watch(path.resolve('./api/'));
 watcher.on('ready', function() {
   watcher.on('all', function() {
+    execa.shell(`eslint -c .eslintrc.js --ext .js ./api --color always`).then((result) => {
+      console.log('Updated backend')
+    }).catch(err => console.log(err.stdout))
     // clear require cache and re require new files after change
-    console.log("Updated backend");
     Object.keys(require.cache).forEach(function(id) {
       if (/[\/\\]api[\/\\]/.test(id)) delete require.cache[id];
     });
@@ -34,8 +36,18 @@ app.use(bodyParser.json());
 // start server
 app.listen(port + 30);
 
+// lint ./api
+execa.shell(`eslint -c .eslintrc.js --ext .js ./api --color always`).then((result) => {
+  startGatsby()
+}).catch((err) => {
+  console.log(err.stdout)
+  startGatsby()
+})
+
 // start Gatsby
-execa.shell(`gatsby develop --port ${port}`).stdout.pipe(process.stdout);
+const startGatsby = () => {
+  execa.shell(`gatsby develop --port ${port} --color always`).stdout.pipe(process.stdout);
+}
 
 // export app
 module.exports = app;

@@ -7,8 +7,8 @@
     "build": "gatsby build",
     "dev": "cross-env PORT=2727 node build/dev-server.js",
     "prod": "cross-env PORT=2727 node build/prod-server.js",
-    "lint": "eslint -c .eslintrc.js --ext .js --ext .jsx ./src; exit 0",
-    "lint-fix": "eslint -c .eslintrc.js --fix --ext .js --ext .jsx ./src; exit 0"
+    "lint": "eslint -c .eslintrc.js --ext .js --ext .jsx ./src ./api; exit 0",
+    "lint-fix": "eslint -c .eslintrc.js --fix --ext .js --ext .jsx ./src ./api; exit 0"
   },
   "dependencies": {
     "body-parser": "^1.18.2",

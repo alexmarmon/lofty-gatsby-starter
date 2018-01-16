@@ -3,8 +3,6 @@ import Helmet from 'react-helmet'
 
 import favicon from '../assets/favicon.ico'
 
-// import './index.css'
-
 const TemplateWrapper = ({ children }) => pug`
   .app
     Helmet(

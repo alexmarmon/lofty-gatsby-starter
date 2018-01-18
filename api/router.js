@@ -27,4 +27,8 @@ const user = require('./controllers/user')
 // router.get('/users', (req, res) => user.getUser(req, res, knex));
 router.get('/users', (req, res) => user.getUser(req, res))
 
+// import authentication routes
+const auth = require('./controllers/authentication')
+router.post('/login', (req, res) => auth.postLogin(req, res))
+
 module.exports = router

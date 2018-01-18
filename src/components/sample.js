@@ -6,7 +6,7 @@ const Sample = () => pug`
     h1 Sample Component
 `
 
-const SampleStyles = styled.div`
+const SampleStyles = styled.div.attrs({ className: 'sample-styles' })`
   h1 {
     color: blue;
   }

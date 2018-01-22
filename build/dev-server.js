@@ -11,6 +11,9 @@ const port = parseInt(process.env.PORT);
 // create express instance
 const app = express();
 
+// use body parser for api requests
+app.use(bodyParser.json());
+
 // Use router for API calls
 app.use('/api', function(req, res, next) {
   require(path.resolve('api/router'))(req, res, next);
@@ -29,9 +32,6 @@ watcher.on('ready', function() {
     });
   });
 });
-
-// use body parser for api requests
-app.use(bodyParser.json());
 
 // start server
 app.listen(port + 30);

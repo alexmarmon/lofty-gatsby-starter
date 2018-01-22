@@ -11,6 +11,7 @@
     "lint-fix": "eslint -c .eslintrc.js --fix --ext .js --ext .jsx ./src ./api; exit 0"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "chokidar": "^2.0.0",

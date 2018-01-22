@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-
 import favicon from '../assets/favicon.ico'
 
 const TemplateWrapper = ({ children }) => pug`

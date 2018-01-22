@@ -1,34 +1,12 @@
 const express = require('express')
 const fs = require('fs') // eslint-disable-line global-require
 
-// const creds = JSON.parse(fs.readFileSync('./creds.json'));
-// const knex = require('knex')({
-//   client: 'mysql',
-//   connection: {
-//     host: creds.host,
-//     user: creds.user,
-//     password: creds.password,
-//     database: creds.database,
-//   },
-// });
-
-// knex.on('query-response', function(result, obj, builder) {
-//   console.log('query:    ', obj.sql);
-//   console.log('vars:     ', obj.bindings);
-//   console.log('response: ', result[0]);
-//   console.log("--------------------------");
-// });
-
 const router = express.Router() // eslint-disable-line new-cap
 
-// import user routes
-const user = require('./controllers/user')
+const user = require('./controllers/user') // import user routes
+const auth = require('./controllers/authentication') // import authentication routes
 
-// router.get('/users', (req, res) => user.getUser(req, res, knex));
 router.get('/users', (req, res) => user.getUser(req, res))
-
-// import authentication routes
-const auth = require('./controllers/authentication')
-router.post('/login', (req, res) => auth.postLogin(req, res))
+router.post('/auth/login', (req, res) => auth.postLogin(req, res))
 
 module.exports = router

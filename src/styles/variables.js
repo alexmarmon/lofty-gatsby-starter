@@ -10,5 +10,13 @@ export default {
   gray20: '#333333',
   gray10: '#191919',
   black: '#000000',
-  brandPrimary: '#000000'
+  brandPrimary: '#000000',
+  // quote page
+  backgroundMainColor: '#E6EBE0',
+  backgroundBlockColor: 'rgba(17,75,95,.15)',
+  backgroundBlueColor: '#114B5F',
+  backgroundRedColor: '#DE8B76',
+  offWhiteFont: '#E6EBE0',
+  blueFont: '#114B5F',
+  redFont: '#CD5C46'
 }

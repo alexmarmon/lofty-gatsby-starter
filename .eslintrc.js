@@ -15,7 +15,10 @@ module.exports = {
       "no-unused-vars": 0,
       "jsx-a11y/anchor-is-valid": 0,
       "comma-dangle": 0,
-      "no-console": 0
+      "no-console": 0,
+      "react/no-unused-state": 0,
+      "no-unused-expressions": 0,
+      "max-len": 0
     },
     "env": {
       "browser": true,

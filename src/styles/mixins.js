@@ -2,6 +2,7 @@ import { css } from 'styled-components'
 
 // sizes for media query mixin
 const sizes = {
+  largeDesktop: 1200,
   desktop: 992,
   tablet: 768,
   phone: 376

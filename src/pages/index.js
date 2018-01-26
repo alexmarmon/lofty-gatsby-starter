@@ -15,7 +15,7 @@ export default class HomePage extends React.Component {
       MainHeader Sample data:
       h2 ${this.data[0].node.age}
       Sample
-      Link(to="/page-2/") Go to page 2
+      Link(to="/page-2") Go to page 2
   `
 }
 

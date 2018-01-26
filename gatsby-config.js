@@ -20,6 +20,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-json',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-remove-trailing-slashes',
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {

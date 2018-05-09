@@ -1,42 +1,36 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
-import Sample from '../components/sample'
-import styles, { MainHeader } from '../styles'
+import styles from '../styles'
+import Logo from '../assets/images/lofty-logo.svg'
 
-export default class HomePage extends React.Component {
-  constructor(props) {
-    super(props)
-    this.data = this.props.data.allTestJson.edges
-  }
-
-  render = () => pug`
-    HomePageStyles
-      MainHeader Sample data:
-      h2 ${this.data[0].node.age}
-      Sample
-      Link(to="/page-2/") Go to page 2
-  `
-}
+const HomePage = () => (
+  <HomePageStyles>
+    <img src={Logo} alt="logo" />
+    <p>Coming Soon...</p>
+    <a href="mailto:info@thatslofty.com">Contact</a>
+  </HomePageStyles>
+)
 
 const HomePageStyles = styled.div`
+  height: 100vh;
+  width: 100vw;
+  background-color: ${styles.backgroundMainColor};
   font-size: 20px;
-  text-align: center;
-  color: ${styles.gray50};
+  color: ${styles.blueFont};
+  font-family: 'CaviarDreams-Bold';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  ${styles.media.desktop`
-    border: 1px solid #000000;
-  `}
-`
+  img {
+    height: 100px;
+    margin-bottom: 100px;
+  }
 
-export const query = graphql`
-  query GetData {
-    allTestJson {
-      edges {
-        node {
-          age
-        }
-      }
-    }
+  a, p {
+    color: ${styles.blueFont};
   }
 `
+
+export default HomePage

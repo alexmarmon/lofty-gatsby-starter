@@ -6,20 +6,3 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
   })
   return config
 }
-
-// use different layout for quote page
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
-
-  return new Promise((resolve, reject) => {
-    if (page.path.match(/^\/quote/)) {
-      // It's assumed that `quote.js` exists in the `/layouts/` directory
-      page.layout = 'quote' // eslint-disable-line
-
-      // Update the page.
-      createPage(page)
-    }
-
-    resolve()
-  })
-}

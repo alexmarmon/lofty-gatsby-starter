@@ -15,6 +15,6 @@ module.exports = {
   //   .catch(err => res.status(500).send(err));
   // },
   getUser: (req, res) => {
-    res.header('Content-Type', 'application/json').status(200).send({ success: 'ohyeah' })
+    res.header('Content-Type', 'application/json').status(200).send({ success: true })
   }
 }

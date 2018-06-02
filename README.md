@@ -1,7 +1,13 @@
 lofty-gatsby-starter
 =====================
 
-### Run It
+### Use nvm & install
+```
+nvm use
+npm install
+```
+
+### Run
 ```
 npm run dev
 ```
@@ -20,20 +26,4 @@ npm run build
 ### Serve Production Files
 ```
 npm run prod
-```
-
-### DB calls
-```
-vim creds.json
-{
-  "host": "localhost",
-  "user": "mysql user",
-  "password": "mysql password",
-  "database": "template"
-}
-
-// in mysql
-create database template;
-
-mysql -u [user] -p template < /path/to/this/repo/src/api/template.sql
 ```

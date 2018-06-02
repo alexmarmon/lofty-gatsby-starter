@@ -1,4 +1,4 @@
-export default {
+const colors = {
   white: '#ffffff',
   gray90: '#e5e5e5',
   gray80: '#cccccc',
@@ -18,5 +18,19 @@ export default {
   backgroundRedColor: '#DE8B76',
   offWhiteFont: '#E6EBE0',
   blueFont: '#114B5F',
-  redFont: '#CD5C46'
+  redFont: '#CD5C46',
+}
+
+const mediaSizes = {
+  largeDesktop: 1200,
+  desktop: 992,
+  tablet: 900,
+  largePhone: 768,
+  phone: 575,
+  smallPhone: 376
+}
+
+export default {
+  ...colors,
+  mediaSizes
 }

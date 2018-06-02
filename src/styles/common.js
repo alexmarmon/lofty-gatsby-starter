@@ -1,22 +1,12 @@
-import styled, { injectGlobal } from 'styled-components'
+import styled from 'styled-components'
 import variables from './variables'
 
-injectGlobal`
-  html {
-    height: 100%;
-    width: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  body {
-    margin: 0;
-  }
-
-  h1, h2, h3, p {
-    color: ${variables.brandPrimary};
-  }
+const MainContainer = styled.div.attrs({ className: 'main-container' })`
+  max-width: 1535px;
+  margin: 0 auto;
+  padding: 80px 80px;
 `
 
 export default {
-
+  MainContainer
 }

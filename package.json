@@ -1,7 +1,7 @@
 {
   "name": "lofty-gatsby-starter",
   "description": "Lofty Gatsby Starter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Alex Marmon",
   "scripts": {
     "build": "gatsby build",
